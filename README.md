@@ -63,11 +63,14 @@ python encrypt_aes.py compressed.7z -o result.dat
 
 ```
 --- 🔒 File encrypted successfully ---
-File 'compressed.7z' encrypted to 'result.dat'.
-IMPORTANT: Store this key and IV securely!
-Key (Hex):    e2a3b4c5d6e7f8a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a1b2c3d4e5f6a7
-Nonce (Hex):  1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
-Auth Tag (Hex): f1e2d3c4b5a69887766554433221100a
+Input file: compressed.7z
+Output file: result.dat
+
+**Please ensure the following information is securely stored, as it will be required for decryption：**
+
+Key:    3bd8190fe438136f464468d90716b02e2c75ecc16c9e05229e661da07d6a96d0
+Nonce (IV):  a4f43ba00f6b44c1e635862a74c7c0d7
+Tag: 50a7338fbf497346e5781d3d176d9abd
 ```
 
 ### 3\. File Decryption (`decrypt_aes.py`)
@@ -83,11 +86,11 @@ python decrypt_aes.py <Encrypted file path> -o <Output file path> --key <KEY> --
 **Example:**
 
 ```bash
-python decrypt_aes.py result.dat \
-    -o compressed.7z \
-    --key e2a3b4c5d6e7f8a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a1b2c3d4e5f6a7 \
-    --iv 1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d \
-    --tag f1e2d3c4b5a69887766554433221100a
+python decrypt_aes.py result.dat \             
+    -o compressed.7z \     
+    --key 3bd8190fe438136f464468d90716b02e2c75ecc16c9e05229e661da07d6a96d0 \
+    --iv a4f43ba00f6b44c1e635862a74c7c0d7 \
+    --tag 50a7338fbf497346e5781d3d176d9abd
 ```
 
 -----
