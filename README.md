@@ -106,6 +106,4 @@ Please note the following:
 
 Welcome to submit bug reports and feature improvement suggestions.
 
-This project is open-sourced under the MIT License. For details, please refer to the [LICENSE] file.
-
-```
+This project is open-sourced under the MIT License. For details, please refer to the [LICENSE](https://github.com/WallsHaveGaps/pyaesfile/blob/main/LICENSE) file.
